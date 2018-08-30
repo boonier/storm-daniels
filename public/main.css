@@ -1,0 +1,87 @@
+:root {
+	--fonts: 'Archivo Black', sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, sans-serif;
+}
+
+.title {
+	font-family: var(--fonts);
+	font-weight: 400;
+	font-size: 56px;
+	color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	margin-top: 85px;
+}
+
+.tweet-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 350px;
+	z-index: 100;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 0 10px 0 #000;
+	/*border-top: 10px solid #0084b4;*/
+}
+
+.hashtag,
+.user,
+.tweet {
+	padding: 7px 15px;
+}
+
+.hashtag {
+	color: white;
+	font-family: var(--fonts);
+	font-weight: 400;
+	text-transform: uppercase;
+	background-color: #0084b4;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+.user {
+	font-style: italic;
+}
+
+.tweet {
+	padding-bottom: 15px;
+}
+
+#counter-container {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	width: 80%;
+	text-align: center;
+	transform: translateX(-50%);
+	background-image: url(./trumpface.png);
+	background-repeat: no-repeat;
+	background-position-x: center;
+	padding: 95px 0 0 0;
+	background-size: 60px;
+}
+
+#counter {
+	font-size: 30px;
+	font-family: var(--fonts);
+	color: white;
+}
+
+#disclaimer {
+	font-family: var(--fonts);
+	font-size: 11px;
+	color: #737373;
+	padding-top: 5px;
+}
