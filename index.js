@@ -39,9 +39,6 @@ var T = new Twit({
   strictSSL:            true,     // optional - requires SSL certificates to be valid.
 });
 
-  T.get('search/tweets', { q: '#fakenews since:2011-07-11' }, function(err, data, response) {
-    console.log(data.statuses.length)
-  })
 
 /*****
 Setup websocket server
@@ -93,7 +90,6 @@ function heartbeat() {
 const interval = setInterval(function ping() {
   wss.clients.forEach(function each(ws) {
     if (ws.isAlive === false) return ws.terminate();
-
     ws.isAlive = false;
     ws.ping(noop);
   });
