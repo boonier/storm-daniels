@@ -15,4 +15,4 @@ Then point the browser to `localhost:3000`
 ### TIPS
 Use the mouse or trackpad (and L/R click) to look around...scroll works as well.
 
-This will play sounds without warning from the beginning! Use headphones in office environs.
+This will play sounds without warning from the beginning! Use headphones in office environments.
