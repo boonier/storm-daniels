@@ -12,4 +12,5 @@ To start up the server `npm start` or `yarn start`
 
 Then point the browser to `localhost:3000`
 
-TIP! Use the mouse or trackpad to look around...
+### TIPs! 
+Use the mouse or trackpad (and L/R click) to look around...scroll works as well

@@ -4,42 +4,12 @@ var counterContainer = document.getElementById('counter');
 var makeLightning = false;
 var flashCnt = 0;
 var hashTagCnt = 0;
-var totalHashHistory = Math.floor(Math.random() * 1000000 + 40000000);
-//
+var totalHashHistory = Math.max(1000000000, Math.floor(Math.random() * 100000000000)); //billions
+
+// Set up audio
 var path = '../audio/';
 var audioIsPlaying = false;
 var spk;
-// var audioFilesSlim = [
-//     'and_it_not_just_mexicans.mp3',
-//     'better_than_ever_before.mp3',
-//     'corportate_inversion_is_a_huge_problem.mp3',
-//     'fifteen_million_dollars.mp3',
-//     'from_the_middle_east.mp3',
-//     'hes_got_tremendous_liability.mp3',
-//     'hillary_failed.mp3',
-//     'i_actually_enjoy_that.mp3',
-//     'i_have_the_best_courses_in_the_world.mp3',
-//     'i_like_china.mp3',
-//     'i_think_i_am_a_nice_person.mp3',
-//     'i_think_ive_been_showing_a_lot_of_meat.mp3',
-//     'im_in_competition_with_them.mp3',
-//     'im_really_rich.mp3',
-//     'incompetent_politicians.mp3',
-//     'islamic_terrorism.mp3',
-//     'nothing_but_problem.mp3',
-//     'obamacare.mp3',
-//     'people_are_tired_of_incompetence.mp3',
-//     'phenomenal.mp3',
-//     'somebody_from_china.mp3',
-//     'terrorists_coming_from_the_middle_east.mp3',
-//     'tremendous_amounts_of_dollars.mp3',
-//     'united_states_is_run_by_stupid_people.mp3',
-//     'we_have_to_unleash_it.mp3',
-//     'well_over_ten_billion_dollars.mp3',
-//     'were_going_to_do_a_fantastic_job.mp3',
-//     'when_he_put_that_up_he_than_took_that_down.mp3',
-//     'womans_health_issues.mp3'
-// ];
 var audioFiles = [
     'a_net_worth.mp3',
     'african_american_youth.mp3',
@@ -145,10 +115,11 @@ var audioFiles = [
     'womans_health_issues.mp3',
     'you_know_were_going_to_be_suing_them_anyway.mp3'
 ];
-
 var cx = new window.AudioContext() || new window.webkitAudioContext();
 var buffers = new BufferLoader(cx, audioFiles, buffersLoaded, path);
 buffers.load();
+
+msgContainer.innerHTML = `<div id="loading-container">It's coming...</div>`;
 
 function buffersLoaded(buffers) {
 
