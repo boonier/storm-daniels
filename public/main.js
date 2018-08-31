@@ -121,14 +121,14 @@ buffers.load();
 
 msgContainer.innerHTML = `<div id="loading-container">It's coming...</div>`;
 
+// Open websocket
+ws.onopen = function () {
+    console.log('websocket is connected ...');
+    ws.send('connected');
+}
+
 function buffersLoaded(buffers) {
 
-    // event emmited when connected
-    ws.onopen = function () {
-        console.log('websocket is connected ...')
-        // sending a send event to websocket server
-        ws.send('connected')
-    }
     // event emmited when receiving message 
     ws.onmessage = function (ev) {
         var data = JSON.parse(ev.data);

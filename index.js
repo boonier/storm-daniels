@@ -12,10 +12,10 @@ Setup Express
 app.set('views', './views');
 app.set('view engine', 'pug');
 
-app.use(function(req, res, next) {
-  console.log('%s request to %s from %s', req.method, req.path, req.ip);
-  next();
-});
+// app.use(function(req, res, next) {
+//   console.log('%s request to %s from %s', req.method, req.path, req.ip);
+//   next();
+// });
 
 app.use(express.static('public'));
 
@@ -93,4 +93,4 @@ const interval = setInterval(function ping() {
     ws.isAlive = false;
     ws.ping(noop);
   });
-}, 500);
+}, 1000);

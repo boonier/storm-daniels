@@ -12,5 +12,6 @@ To start up the server `npm start` or `yarn start`
 
 Then point the browser to `localhost:3000`
 
-### TIPs! 
-Use the mouse or trackpad (and L/R click) to look around...scroll works as well
+### TIPS
+Use the mouse or trackpad (and L/R click) to look around...scroll works as well.
+This will play sounds without warning from the beginning! Use headphones in office environs.
